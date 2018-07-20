@@ -1,35 +1,35 @@
-var flags = [
-    "resources/flags/afghanistan.png",
+const flags = [
+    "resources/flags/Afghanistan.png",
     "resources/flags/Albania.png",
     "resources/flags/Algeria.png",
-    "resources/flags/andorra.png",
-    "resources/flags/angola.png",
+    "resources/flags/Andorra.png",
+    "resources/flags/Angola.png",
     "resources/flags/Antigua and Barbuda.png",
-    "resources/flags/argentina.png",
-    "resources/flags/armenia.png",
-    "resources/flags/australia.png",
-    "resources/flags/austria.png",
+    "resources/flags/Argentina.png",
+    "resources/flags/Armenia.png",
+    "resources/flags/Australia.png",
+    "resources/flags/Austria.png",
     "resources/flags/Azerbaijan.png",
     "resources/flags/Bahamas.png",
     "resources/flags/Bahrain.png",
     "resources/flags/Bangladesh.png",
     "resources/flags/Barbados.png",
     "resources/flags/Belarus.png",
-    "resources/flags/belgium.png",
+    "resources/flags/Belgium.png",
     "resources/flags/Belize.png",
     "resources/flags/Benin.png",
     "resources/flags/Bhutan.png",
     "resources/flags/Bolivia.png",
     "resources/flags/Bosnia and Herzegovina.png",
     "resources/flags/Botswana.png",
-    "resources/flags/brazil.png",
+    "resources/flags/Brazil.png",
     "resources/flags/Brunei.png",
-    "resources/flags/bulgaria.png",
+    "resources/flags/Bulgaria.png",
     "resources/flags/Burkina Faso.png",
     "resources/flags/Burundi.png",
     "resources/flags/Cambodia.png",
     "resources/flags/Cameroon.png",
-    "resources/flags/canada.png",
+    "resources/flags/Canada.png",
     "resources/flags/Cape Verde.png",
     "resources/flags/Central African Republic.png",
     "resources/flags/Chad.png",
@@ -40,8 +40,8 @@ var flags = [
     "resources/flags/Congo.png",
     "resources/flags/Costa Rica.png",
     "resources/flags/Croatia.png",
-    "resources/flags/cuba.png",
-    "resources/flags/cyprus.png",
+    "resources/flags/Cuba.png",
+    "resources/flags/Cyprus.png",
     "resources/flags/Czech Republic.png",
     "resources/flags/Democratic Republic of the Congo.png",
     "resources/flags/Denmark.png",
@@ -61,10 +61,10 @@ var flags = [
     "resources/flags/France.png",
     "resources/flags/Gabon.png",
     "resources/flags/Gambia.png",
-    "resources/flags/georgia.png",
-    "resources/flags/germany.png",
+    "resources/flags/Georgia.png",
+    "resources/flags/Germany.png",
     "resources/flags/Ghana.png",
-    "resources/flags/greece.png",
+    "resources/flags/Greece.png",
     "resources/flags/Grenada.png",
     "resources/flags/Guatemala.png",
     "resources/flags/Guinea.png",
@@ -78,12 +78,12 @@ var flags = [
     "resources/flags/Indonesia.png",
     "resources/flags/Iran.png",
     "resources/flags/Iraq.png",
-    "resources/flags/ireland.png",
-    "resources/flags/israel.png",
+    "resources/flags/Ireland.png",
+    "resources/flags/Israel.png",
     "resources/flags/italy.png",
     "resources/flags/Ivory Coast.png",
-    "resources/flags/jamaica.png",
-    "resources/flags/japan.png",
+    "resources/flags/Jamaica.png",
+    "resources/flags/Japan.png",
     "resources/flags/Jordan.png",
     "resources/flags/Kazakhstan.png",
     "resources/flags/Kenya.png",
@@ -94,7 +94,7 @@ var flags = [
     "resources/flags/Kyrgyzstan.png",
     "resources/flags/Laos.png",
     "resources/flags/Latvia.png",
-    "resources/flags/lebanon.png",
+    "resources/flags/Lebanon.png",
     "resources/flags/Lesotho.png",
     "resources/flags/Liberia.png",
     "resources/flags/Libya.png",
@@ -111,7 +111,7 @@ var flags = [
     "resources/flags/Marshall Islands.png",
     "resources/flags/Mauritania.png",
     "resources/flags/Mauritius.png",
-    "resources/flags/mexico.png",
+    "resources/flags/Mexico.png",
     "resources/flags/Moldova.png",
     "resources/flags/Monaco.png",
     "resources/flags/Mongolia.png",
@@ -122,14 +122,14 @@ var flags = [
     "resources/flags/Namibia.png",
     "resources/flags/Nauru.png",
     "resources/flags/Nepal.png",
-    "resources/flags/new zealand.png",
+    "resources/flags/New zealand.png",
     "resources/flags/Nicaragua.png",
     "resources/flags/Niger.png",
     "resources/flags/Nigeria.png",
     "resources/flags/North Korea.png",
     "resources/flags/Norway.png",
     "resources/flags/Oman.png",
-    "resources/flags/pakistan.png",
+    "resources/flags/Pakistan.png",
     "resources/flags/Palau.png",
     "resources/flags/Panama.png",
     "resources/flags/Papua New Guinea.png",
@@ -140,7 +140,7 @@ var flags = [
     "resources/flags/Portugal.png",
     "resources/flags/Qatar.png",
     "resources/flags/Romania.png",
-    "resources/flags/russia.png",
+    "resources/flags/Russia.png",
     "resources/flags/Rwanda.png",
     "resources/flags/Sahrawi Arab Democratic Republic.png",
     "resources/flags/Saint Kitts and Nevis.png",
@@ -149,19 +149,19 @@ var flags = [
     "resources/flags/Samoa.png",
     "resources/flags/San Marino.png",
     "resources/flags/Sao Tome and Principe.png",
-    "resources/flags/saudi arabia.png",
+    "resources/flags/Saudi arabia.png",
     "resources/flags/Senegal.png",
     "resources/flags/Serbia.png",
     "resources/flags/Seychelles.png",
     "resources/flags/Sierra Leone.png",
     "resources/flags/Singapore.png",
-    "resources/flags/slovakia.png",
-    "resources/flags/slovenia.png",
+    "resources/flags/Slovakia.png",
+    "resources/flags/Slovenia.png",
     "resources/flags/Solomon Islands.png",
     "resources/flags/Somalia.png",
     "resources/flags/South Africa.png",
     "resources/flags/South Korea.png",
-    "resources/flags/spain.png",
+    "resources/flags/Spain.png",
     "resources/flags/Sri Lanka.png",
     "resources/flags/Sudan.png",
     "resources/flags/Suriname.png",
@@ -184,9 +184,9 @@ var flags = [
     "resources/flags/Uganda.png",
     "resources/flags/Ukraine.png",
     "resources/flags/United Arab Emirates.png",
-    "resources/flags/united kingdom.png",
-    "resources/flags/united states.png",
-    "resources/flags/uruguay.png",
+    "resources/flags/United kingdom.png",
+    "resources/flags/United states.png",
+    "resources/flags/Uruguay.png",
     "resources/flags/Uzbekistan.png",
     "resources/flags/Vanuatu.png",
     "resources/flags/Vatican City.png",
@@ -197,164 +197,163 @@ var flags = [
     "resources/flags/Zimbabwe.png",  
 ];
 
-var cntDisplay = document.querySelector(".cntDisplay");
-var squares = document.querySelectorAll(".square");
-var img = document.querySelectorAll(".flagImg");
-var h1 = document.querySelector("h1");
-var backColor = document.querySelector(".backColor");
-var messageDisplay = document.querySelector(".message");
-var resetButton = document.querySelector(".reset");
-var aboutButton = document.querySelector(".about");
-var about = document.querySelector("#about");
-var container = document.querySelector("#container");
-var track = document.querySelector(".track");
-var scoreDisplay = document.querySelector(".score");
-var score = 0;
-var rFlags = generateRandomFlag(4);
-
-
-// loop through the image squares
-for (var i = 0; i < img.length; i++) {
-	// assign the flags to the images
-	img[i].setAttribute("src", rFlags[i]);
-	img[i].addEventListener("click", function() {
-		// assigned the clicked flag to a variable
-	var clickedFlag = this.getAttribute("src");
-	// compare if the clicked flag equals to the displayed country
-	if (clickedFlag.includes(cntDisplay.textContent)) {
-		messageDisplay.textContent = "Correct!";
-		resetButton.textContent = "Play Again?"
-		// if correct change h1 background to the correct country flag
-		backImage(clickedFlag);
-		// if correct change all squares to the correct country flag
-		changeSquares(clickedFlag);
-		// add one to score and update display
-		resetButton.classList.add("selected");
-		score++;
-		scoreDisplay.textContent = score;
-		scoreDisplay.classList.add("selected");
-		scoreDisplay.style.color = "white";
-		// prevent clicking on correct image more than once
-		for (var i = 0; i < img.length; i++) {
-			img[i].classList.add("noClick");
-		}
-	}
-	else {
-		// if not correct hide the clicked flag
-		this.style.visibility = "hidden";
-		this.style.opacity = "0";
-		messageDisplay.textContent = "Try Again!";
-		score = 0;
-		scoreDisplay.textContent = score;
-		scoreDisplay.classList.remove("selected");
-		scoreDisplay.style.color = "red";
-	}
-		
-	});
-}
-
-// CHANGE H1 BACKGROUND TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
-function backImage(image) {
-	h1.style.backgroundImage = 'url("'+ image +'")';
-	h1.style.backgroundPosition = "center";
-	h1.style.backgroundSize = "cover";
-	h1.style.backgroundRepeat = "no-repeat";
-	h1.style.color = "black";
-	h1.classList.add("special");
-	backColor.classList.add("setBack");
-}
+const cntDisplay = document.querySelector(".cntDisplay");
+const squares = document.querySelectorAll(".square");
+const img = document.querySelectorAll(".flagImg");
+const h1 = document.querySelector("h1");
+const backColor = document.querySelector(".backColor");
+const messageDisplay = document.querySelector(".message");
+const resetButton = document.querySelector(".reset");
+const aboutButton = document.querySelector(".about");
+const about = document.querySelector("#about");
+const container = document.querySelector("#container");
+const track = document.querySelector(".track");
+const scoreDisplay = document.querySelector(".score");
+let score = 0;
 
 // CHANGE ALL IMAGES TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
-function changeSquares(flag) {
-	for (var i = 0; i < img.length; i++) {
-		img[i].style.visibility = "visible";
-		img[i].style.opacity = "1";
-		img[i].setAttribute("src", flag);
-	}
+const changeSquares = (flag) => {
+    for (var i = 0; i < img.length; i++) {
+        img[i].style.visibility = "visible";
+        img[i].style.opacity = "1";
+        img[i].setAttribute("src", flag);
+    }
 }
 
 // GENERATE RANDOM FLAG
-function randomFlag() {
-	var randomFlag = Math.floor(Math.random() * flags.length);
-	return flags[randomFlag];
+const randomFlag = () => {
+    var randomFlag = Math.floor(Math.random() * flags.length);
+    return flags[randomFlag];
 }
 
 // PUSH 4 RANDOM FLAGS INTO AN ARRAY AND MAKE SURE ONE FLAG DOESN'T GET PUSHED TWICE
-function generateRandomFlag(num) {
-	var arr = [];
-	var reachNum = false;
-	var ctr = 0;
-	while (!reachNum) {
-		var flag = randomFlag();
-		if (arr.indexOf(flag) === -1) {
-			arr.push(flag);
-			ctr++;
-		}
-		if (ctr === num) {
-			reachNum = true;
-		}
-	}
-	return arr;
+const generateRandomFlag = (num) => {
+    var arr = [];
+    var reachNum = false;
+    var ctr = 0;
+    while (!reachNum) {
+        var flag = randomFlag();
+        if (arr.indexOf(flag) === -1) {
+            arr.push(flag);
+            ctr++;
+        }
+        if (ctr === num) {
+            reachNum = true;
+        }
+    }
+    return arr;
 }
 
-/*
-// PUSH 4 RANDOM FLAGS INTO AN ARRAY --- ALTERNATIVE WAY
-function generateRandomFlag(num) {
-    return flags
-    .slice() // copy the flags array because .sort mutates the source array
-    .sort(function() { 
-    return Math.random() - 0.5;
-    }) // shuffle the copied array
-    .slice(-num); // get the LAST "num" values of the shuffled array
+let rFlags = generateRandomFlag(4);
+
+// CHANGE H1 BACKGROUND TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
+const backImage = (image) => {
+    h1.style.backgroundImage = 'url("'+ image +'")';
+    h1.style.backgroundPosition = "center";
+    h1.style.backgroundSize = "cover";
+    h1.style.backgroundRepeat = "no-repeat";
+    h1.style.color = "black";
+    h1.classList.add("special");
+    backColor.classList.add("setBack");
 }
 
-*/
+const init = () => {
+    // loop through the image squares
+    for (var i = 0; i < img.length; i++) {
+        // assign the flags to the images
+        img[i].setAttribute("src", rFlags[i]);
+        img[i].addEventListener("click", function() {
+            // assigned the clicked flag to a variable
+        var clickedFlag = this.getAttribute("src");
+        // compare if the clicked flag equals to the displayed country
+        if (clickedFlag.includes(cntDisplay.textContent)) {
+            messageDisplay.textContent = "Correct!";
+            resetButton.textContent = "Play Again?"
+            // if correct change h1 background to the correct country flag
+            backImage(clickedFlag);
+            // if correct change all squares to the correct country flag
+            changeSquares(clickedFlag);
+            // add one to score and update display
+            resetButton.classList.add("selected");
+            score++;
+            scoreDisplay.textContent = score;
+            scoreDisplay.classList.add("selected");
+            scoreDisplay.style.color = "white";
+            // prevent clicking on correct image more than once
+            for (var i = 0; i < img.length; i++) {
+                img[i].classList.add("noClick");
+            }
+        }
+        else {
+            // if not correct hide the clicked flag
+            this.style.visibility = "hidden";
+            this.style.opacity = "0";
+            messageDisplay.textContent = "Try Again!";
+            score = 0;
+            scoreDisplay.textContent = score;
+            scoreDisplay.classList.remove("selected");
+            scoreDisplay.style.color = "red";
+        }
+            
+        });
+    }
+}
 
 // NEED TO PULL RANDOM COUNTRY NAME OUT OF THE ARRAY THAT CONTAINS 4 FLAGS
-function pickCountry() {
+const pickCountry = () => {
 	var randomCountry = Math.floor(Math.random() * rFlags.length);
 	return rFlags[randomCountry].slice(16, -4);
 }
 
+// CREATE PLAY AGAIN BUTTON
+const playAgain = () => {
+    // generate all new flags
+    rFlags = generateRandomFlag(4);
+    // change display country to picked country
+    cntDisplay.textContent = pickCountry();
+    // make squares visible
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].style.display = "block";
+        about.style.display = "none";
+    }
+    // assign the new flags to the image squares
+    for (var i = 0; i < img.length; i++) {
+        img[i].setAttribute("src", rFlags[i]);
+        img[i].style.visibility = "visible";
+        img[i].style.opacity = "1";
+        img[i].classList.remove("noClick");
+    }
+    resetButton.innerHTML = '<i class="fa fa-refresh" aria-hidden="true"></i>' + " " + "Shuffle";
+    messageDisplay.textContent = "";
+    h1.style.backgroundImage = "none";
+    h1.style.color = "white";
+    h1.classList.remove("special");
+    backColor.classList.remove("setBack");
+    container.classList.remove("setBack");
+    about.classList.remove("setForward");
+    resetButton.classList.remove("selected");
+    aboutButton.classList.remove("selected");
+}
+
+const aboutLink = () => {
+    container.classList.toggle("setBack");
+    about.classList.toggle("setForward");
+    aboutButton.classList.toggle("selected");
+}
+
 cntDisplay.textContent = pickCountry();
 
-// CREATE PLAY AGAIN BUTTON
+// PLAY AGAIN
 resetButton.addEventListener("click", function() {
-// generate all new flags
-	rFlags = generateRandomFlag(4);
-	// change display country to picked country
-	cntDisplay.textContent = pickCountry();
-	// make squares visible
-	for (var i = 0; i < squares.length; i++) {
-		squares[i].style.display = "block";
-		about.style.display = "none";
-	}
-	// assign the new flags to the image squares
-	for (var i = 0; i < img.length; i++) {
-	    img[i].setAttribute("src", rFlags[i]);
-	    img[i].style.visibility = "visible";
-	    img[i].style.opacity = "1";
-	    img[i].classList.remove("noClick");
-	}
-	resetButton.innerHTML = '<i class="fa fa-refresh" aria-hidden="true"></i>' + " " + "Shuffle";
-	messageDisplay.textContent = "";
-	h1.style.backgroundImage = "none";
-	h1.style.color = "white";
-	h1.classList.remove("special");
-	backColor.classList.remove("setBack");
-	container.classList.remove("setBack");
-	about.classList.remove("setForward");
-	resetButton.classList.remove("selected");
-	aboutButton.classList.remove("selected");
+    playAgain();
 });
 
 // ABOUT BUTTON
 aboutButton.addEventListener("click", function() {
-	container.classList.toggle("setBack");
-	about.classList.toggle("setForward");
-	aboutButton.classList.toggle("selected");
+	aboutLink();
 });
 
+init();
 
 
 
