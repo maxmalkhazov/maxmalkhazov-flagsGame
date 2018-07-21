@@ -1,4 +1,4 @@
-const flags = [
+var flags = [
     "resources/flags/Afghanistan.png",
     "resources/flags/Albania.png",
     "resources/flags/Algeria.png",
@@ -197,163 +197,164 @@ const flags = [
     "resources/flags/Zimbabwe.png",  
 ];
 
-const cntDisplay = document.querySelector(".cntDisplay");
-const squares = document.querySelectorAll(".square");
-const img = document.querySelectorAll(".flagImg");
-const h1 = document.querySelector("h1");
-const backColor = document.querySelector(".backColor");
-const messageDisplay = document.querySelector(".message");
-const resetButton = document.querySelector(".reset");
-const aboutButton = document.querySelector(".about");
-const about = document.querySelector("#about");
-const container = document.querySelector("#container");
-const track = document.querySelector(".track");
-const scoreDisplay = document.querySelector(".score");
-let score = 0;
+var cntDisplay = document.querySelector(".cntDisplay");
+var squares = document.querySelectorAll(".square");
+var img = document.querySelectorAll(".flagImg");
+var h1 = document.querySelector("h1");
+var backColor = document.querySelector(".backColor");
+var messageDisplay = document.querySelector(".message");
+var resetButton = document.querySelector(".reset");
+var aboutButton = document.querySelector(".about");
+var about = document.querySelector("#about");
+var container = document.querySelector("#container");
+var track = document.querySelector(".track");
+var scoreDisplay = document.querySelector(".score");
+var score = 0;
+var rFlags = generateRandomFlag(4);
+
+
+// loop through the image squares
+for (var i = 0; i < img.length; i++) {
+	// assign the flags to the images
+	img[i].setAttribute("src", rFlags[i]);
+	img[i].addEventListener("click", function() {
+		// assigned the clicked flag to a variable
+	var clickedFlag = this.getAttribute("src");
+	// compare if the clicked flag equals to the displayed country
+	if (clickedFlag.includes(cntDisplay.textContent)) {
+		messageDisplay.textContent = "Correct!";
+		resetButton.textContent = "Play Again?"
+		// if correct change h1 background to the correct country flag
+		backImage(clickedFlag);
+		// if correct change all squares to the correct country flag
+		changeSquares(clickedFlag);
+		// add one to score and update display
+		resetButton.classList.add("selected");
+		score++;
+		scoreDisplay.textContent = score;
+		scoreDisplay.classList.add("selected");
+		scoreDisplay.style.color = "white";
+		// prevent clicking on correct image more than once
+		for (var i = 0; i < img.length; i++) {
+			img[i].classList.add("noClick");
+		}
+	}
+	else {
+		// if not correct hide the clicked flag
+		this.style.visibility = "hidden";
+		this.style.opacity = "0";
+		messageDisplay.textContent = "Try Again!";
+		score = 0;
+		scoreDisplay.textContent = score;
+		scoreDisplay.classList.remove("selected");
+		scoreDisplay.style.color = "red";
+	}
+		
+	});
+}
+
+// CHANGE H1 BACKGROUND TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
+function backImage(image) {
+	h1.style.backgroundImage = 'url("'+ image +'")';
+	h1.style.backgroundPosition = "center";
+	h1.style.backgroundSize = "cover";
+	h1.style.backgroundRepeat = "no-repeat";
+	h1.style.color = "black";
+	h1.classList.add("special");
+	backColor.classList.add("setBack");
+}
 
 // CHANGE ALL IMAGES TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
-const changeSquares = (flag) => {
-    for (var i = 0; i < img.length; i++) {
-        img[i].style.visibility = "visible";
-        img[i].style.opacity = "1";
-        img[i].setAttribute("src", flag);
-    }
+function changeSquares(flag) {
+	for (var i = 0; i < img.length; i++) {
+		img[i].style.visibility = "visible";
+		img[i].style.opacity = "1";
+		img[i].setAttribute("src", flag);
+	}
 }
 
 // GENERATE RANDOM FLAG
-const randomFlag = () => {
-    var randomFlag = Math.floor(Math.random() * flags.length);
-    return flags[randomFlag];
+function randomFlag() {
+	var randomFlag = Math.floor(Math.random() * flags.length);
+	return flags[randomFlag];
 }
 
 // PUSH 4 RANDOM FLAGS INTO AN ARRAY AND MAKE SURE ONE FLAG DOESN'T GET PUSHED TWICE
-const generateRandomFlag = (num) => {
-    var arr = [];
-    var reachNum = false;
-    var ctr = 0;
-    while (!reachNum) {
-        var flag = randomFlag();
-        if (arr.indexOf(flag) === -1) {
-            arr.push(flag);
-            ctr++;
-        }
-        if (ctr === num) {
-            reachNum = true;
-        }
-    }
-    return arr;
+function generateRandomFlag(num) {
+	var arr = [];
+	var reachNum = false;
+	var ctr = 0;
+	while (!reachNum) {
+		var flag = randomFlag();
+		if (arr.indexOf(flag) === -1) {
+			arr.push(flag);
+			ctr++;
+		}
+		if (ctr === num) {
+			reachNum = true;
+		}
+	}
+	return arr;
 }
 
-let rFlags = generateRandomFlag(4);
-
-// CHANGE H1 BACKGROUND TO THE CORRECT IMAGE WHEN THE ANSWER IS CORRECT
-const backImage = (image) => {
-    h1.style.backgroundImage = 'url("'+ image +'")';
-    h1.style.backgroundPosition = "center";
-    h1.style.backgroundSize = "cover";
-    h1.style.backgroundRepeat = "no-repeat";
-    h1.style.color = "black";
-    h1.classList.add("special");
-    backColor.classList.add("setBack");
+/*
+// PUSH 4 RANDOM FLAGS INTO AN ARRAY --- ALTERNATIVE WAY
+function generateRandomFlag(num) {
+    return flags
+    .slice() // copy the flags array because .sort mutates the source array
+    .sort(function() { 
+    return Math.random() - 0.5;
+    }) // shuffle the copied array
+    .slice(-num); // get the LAST "num" values of the shuffled array
 }
 
-const init = () => {
-    // loop through the image squares
-    for (var i = 0; i < img.length; i++) {
-        // assign the flags to the images
-        img[i].setAttribute("src", rFlags[i]);
-        img[i].addEventListener("click", function() {
-            // assigned the clicked flag to a variable
-        var clickedFlag = this.getAttribute("src");
-        // compare if the clicked flag equals to the displayed country
-        if (clickedFlag.includes(cntDisplay.textContent)) {
-            messageDisplay.textContent = "Correct!";
-            resetButton.textContent = "Play Again?"
-            // if correct change h1 background to the correct country flag
-            backImage(clickedFlag);
-            // if correct change all squares to the correct country flag
-            changeSquares(clickedFlag);
-            // add one to score and update display
-            resetButton.classList.add("selected");
-            score++;
-            scoreDisplay.textContent = score;
-            scoreDisplay.classList.add("selected");
-            scoreDisplay.style.color = "white";
-            // prevent clicking on correct image more than once
-            for (var i = 0; i < img.length; i++) {
-                img[i].classList.add("noClick");
-            }
-        }
-        else {
-            // if not correct hide the clicked flag
-            this.style.visibility = "hidden";
-            this.style.opacity = "0";
-            messageDisplay.textContent = "Try Again!";
-            score = 0;
-            scoreDisplay.textContent = score;
-            scoreDisplay.classList.remove("selected");
-            scoreDisplay.style.color = "red";
-        }
-            
-        });
-    }
-}
+*/
 
 // NEED TO PULL RANDOM COUNTRY NAME OUT OF THE ARRAY THAT CONTAINS 4 FLAGS
-const pickCountry = () => {
+function pickCountry() {
 	var randomCountry = Math.floor(Math.random() * rFlags.length);
 	return rFlags[randomCountry].slice(16, -4);
 }
 
-// CREATE PLAY AGAIN BUTTON
-const playAgain = () => {
-    // generate all new flags
-    rFlags = generateRandomFlag(4);
-    // change display country to picked country
-    cntDisplay.textContent = pickCountry();
-    // make squares visible
-    for (var i = 0; i < squares.length; i++) {
-        squares[i].style.display = "block";
-        about.style.display = "none";
-    }
-    // assign the new flags to the image squares
-    for (var i = 0; i < img.length; i++) {
-        img[i].setAttribute("src", rFlags[i]);
-        img[i].style.visibility = "visible";
-        img[i].style.opacity = "1";
-        img[i].classList.remove("noClick");
-    }
-    resetButton.innerHTML = '<i class="fa fa-refresh" aria-hidden="true"></i>' + " " + "Shuffle";
-    messageDisplay.textContent = "";
-    h1.style.backgroundImage = "none";
-    h1.style.color = "white";
-    h1.classList.remove("special");
-    backColor.classList.remove("setBack");
-    container.classList.remove("setBack");
-    about.classList.remove("setForward");
-    resetButton.classList.remove("selected");
-    aboutButton.classList.remove("selected");
-}
-
-const aboutLink = () => {
-    container.classList.toggle("setBack");
-    about.classList.toggle("setForward");
-    aboutButton.classList.toggle("selected");
-}
-
 cntDisplay.textContent = pickCountry();
 
-// PLAY AGAIN
+// CREATE PLAY AGAIN BUTTON
 resetButton.addEventListener("click", function() {
-    playAgain();
+// generate all new flags
+	rFlags = generateRandomFlag(4);
+	// change display country to picked country
+	cntDisplay.textContent = pickCountry();
+	// make squares visible
+	for (var i = 0; i < squares.length; i++) {
+		squares[i].style.display = "block";
+		about.style.display = "none";
+	}
+	// assign the new flags to the image squares
+	for (var i = 0; i < img.length; i++) {
+	    img[i].setAttribute("src", rFlags[i]);
+	    img[i].style.visibility = "visible";
+	    img[i].style.opacity = "1";
+	    img[i].classList.remove("noClick");
+	}
+	resetButton.innerHTML = '<i class="fa fa-refresh" aria-hidden="true"></i>' + " " + "Shuffle";
+	messageDisplay.textContent = "";
+	h1.style.backgroundImage = "none";
+	h1.style.color = "white";
+	h1.classList.remove("special");
+	backColor.classList.remove("setBack");
+	container.classList.remove("setBack");
+	about.classList.remove("setForward");
+	resetButton.classList.remove("selected");
+	aboutButton.classList.remove("selected");
 });
 
 // ABOUT BUTTON
 aboutButton.addEventListener("click", function() {
-	aboutLink();
+	container.classList.toggle("setBack");
+	about.classList.toggle("setForward");
+	aboutButton.classList.toggle("selected");
 });
 
-init();
 
 
 
